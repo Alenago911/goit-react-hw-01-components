@@ -1,6 +1,6 @@
 import React from 'react';
-import {Profile} from "./components/Profile/Profile.js";
-import user from "./components/Profile/user.json";
+import {Profile} from "./Profile/Profile.js";
+import user from "../data/user.json";
 
 
 export const App = () => {
