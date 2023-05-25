@@ -1,0 +1,25 @@
+.transactionHistory {
+width: 80%;
+margin: 0 auto;
+/* margin-top: 20px; */
+border-collapse: collapse;
+}
+  
+.transactionHistory thead {
+width: 80px;
+height: 40px;
+}
+  
+.transactionHistory .transactionHistory th,
+.transactionHistory td {
+width: 80px;
+height: 40px;
+text-align: center;
+border-bottom: 1px solid #ddd;
+}
+  
+.transactionHistory th {
+background-color: dodgerblue;
+color: white;
+}
+
