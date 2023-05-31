@@ -5,9 +5,7 @@ import css from "./Statistics.module.css";
 
 export const Statistics = ({ title, stats }) => {
     const getRandomColor = () => {
-      const colors = ['#FF6384', '#e44478', '#2ddee1', '#5239a2', '#8b1477'];
-      const randomIndex = Math.floor(Math.random() * colors.length);
-      return colors[randomIndex];
+        return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
     };
 
   return (
@@ -28,6 +26,11 @@ export const Statistics = ({ title, stats }) => {
 };            
         
 Statistics.propTypes = {
- title: PropTypes.string,
- stats: PropTypes.object.isRequired,
-}; 
+title: PropTypes.string,
+stats: PropTypes.arrayOf(
+PropTypes.shape({
+label: PropTypes.string.isRequired,
+percentage: PropTypes.string.isRequired,
+})
+).isRequired,
+ }; 
